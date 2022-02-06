@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        /*@media screen and (min-width: 900px) and (max-width: 1200px) {*/
+        /*    .sibling-1 {*/
+        /*        display: none;*/
+        /*    }*/
+
+        /*    .sibling-2 {*/
+        /*        display: block;*/
+        /*    }*/
+        /*}*/
+
+        /*@media screen and (min-width: 600px) and (max-width: 900px) {*/
+        /*    .sibling-2 {*/
+        /*        display: none;*/
+        /*    }*/
+
+        /*    .sibling-1 {*/
+        /*        display: block;*/
+        /*    }*/
+
+        /*}*/
+
+
+        .wrap {
+            display: flex;
+        }
+
+        .sibling-2 {
+            order: 1;
+        }
+
+        .sibling-1 {
+            order: 2;
+        }
+
+        .target {
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <div class="sibling-1"></div>
+    <div class="target"></div>
+    <div class="sibling-2"></div>
+</div>
+
+<script>
+
+
+    let fn = 'Ivan';
+    let mn = 'Petrovich';
+    let ln = 'Pupkin';
+
+    // let fullName = fn + ' ' + mn + " " + ln;
+    // console.log(fullName);
+
+    let fullname = `${fn} ${mn} ${ln}`;
+    console.log(fullname);
+    console.log(' "ikarus" ');
+    console.log(" 'ikarus' ");
+    // привіт) якшо можна пояснити ще раз на рахунок що таке інтерпретація, ітерація і як правильно працювати з індекс ))))дякую
+
+    //indexes    0    1     2     3
+    let nums = [123, -234, 354, 4456, 877, 1];
+    // lenght = last index + 1
+    // last index = lenght - 1
+
+
+    // debugger;
+    // for (let i = 0; i < nums.length; i++) {
+    //     let currentNum = nums[i];
+    //     console.log(currentNum);
+    //
+    // }
+
+    // Використання for in, можливо, на прикладі якихось складніших завдань, будь ласка
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+    for (const user of users) {
+        document.write(`<ul>`)
+        for (const key in user) {
+            document.write(`<li>${key} - ${user[key]}</li>`);
+        }
+
+
+        document.write(`</ul>`)
+
+    }
+
+
+    // person
+    // user
+    // product
+    // let obj = {key1: 'value1', key2: 'value2'}
+
+    //          0 1  2  3   4       5
+    let arr = [1, 2, 3, 4, true, {name: 'vasya'}];
+
+    // Як звертатись до конкретного елемента масив а через цикл ?
+
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (i === 3) {
+    //         console.log(arr[i]);
+    //     }
+    // }
+    //
+    //
+    // for (let i = arr.length - 1; i >= 0; i--) {
+    //     console.log(arr[i]);
+    // }
+
+
+    let x = !!null ? 5 : 6;
+
+
+</script>
+
+</body>
+</html>
