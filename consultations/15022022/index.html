@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+
+    </title>
+</head>
+<body>
+<script>
+
+    // for (let i = 10; i < 100; i =i+ 4) {
+    //
+    // }
+
+    // for (const item of [1, 2, 3]) {
+    //
+    // }
+
+
+    // let user = {id: 111, name: 'asdasd'};
+    // for (const key in user) {
+    //
+    // }
+
+
+    // let i = 10;
+    // while (i < 100) {
+    //     i++;
+    // }
+
+
+    // do {
+    //     console.log('adsad');
+    // } while (false)
+
+
+    // let numbers = [11, 22, 33, 44]; // {id:22}
+    // let map = numbers.map(item => {
+    //     return {id: item};
+    // });
+    // console.log(map)
+
+
+    // let numbers = [11, 22, 33, 44, 55, 66, 77, 8];
+    //
+    // let reduce = numbers.reduce((acumulator, number) => {
+    //     if (number % 2 === 0) {
+    //         acumulator.even.push(number);
+    //     } else {
+    //         acumulator.odd.push(number);
+    //
+    //     }
+    //     return acumulator;
+    //
+    // }, {odd: [], even: []});
+    // console.log(reduce);
+
+
+    // Array.prototype.myFilter = function (callback) {
+    //
+    //     let filter = [];
+    //     for (const element of this) {
+    //         if (callback(element)) {
+    //             filter.push(element);
+    //         }
+    //
+    //     }
+    //
+    //     return filter;
+    //
+    // };
+    //
+    //
+    // console.log([1, 2, 3, 4, 5].myFilter((item) => {
+    //     return item % 2 === 0;
+    // }));
+
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+
+    users.filter(value => value.status);
+
+
+    users.filter(value => !value.status);
+    users.filter(value => value.age > 30);
+
+
+    // (function (num){
+    //     console.log(num);
+    // }(1));
+    //
+    // (function (num){
+    //     console.log(num);
+    // })(2);
+
+
+    // for (let i = 0; i < users.length; i++) {
+    //
+    //     console.log(users[i - 1]);
+    //     console.log(users[i]);
+    //     console.log(users[i + 1]);
+    //     console.log('---------')
+    //
+    // }
+
+
+</script>
+
+
+</body>
+</html>
