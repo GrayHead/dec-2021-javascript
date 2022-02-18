@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="a">
+    <p class="b1">
+        <a href="" id="x">Lorem ipsum.</a>
+    </p>
+    <p class="b2">
+        <a href="" id="y">Lorem ipsum dolor.</a>
+    </p>
+
+    <div>
+        <div>
+            <div><p></p></div>
+            <p></p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // let a1 = document.getElementsByTagName('a')[0];
+    // console.log(a1.id); // ''
+    // console.log(a1.getAttribute('id')); // null
+
+
+    function scraper(startElement) {
+        console.log(startElement);
+        let children = startElement.children;
+        for (const child of children) {
+            scraper(child);
+        }
+    }
+
+    scraper(document.body);
+
+</script>
+
+</body>
+</html>
