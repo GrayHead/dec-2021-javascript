@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <h2>form1</h2>
+    <form action="/asdasd" name="form1">
+        <input type="text" name="username" placeholder="eneter name">
+        <input type="password" name="password" placeholder="enter password">
+        <div>
+            <label>
+                male
+                <input type="radio" name="gender" value="man">
+
+            </label>
+            <label>
+                Female
+                <input type="radio" name="gender" value="woman">
+            </label>
+
+        </div>
+        <label>
+            <input type="checkbox" name="status">
+        </label>
+
+        <button>save</button>
+    </form>
+</div>
+<div>
+    <h2>From 2</h2>
+    <form action="/asdasd" name="form2">
+        <input type="text" name="username" placeholder="eneter name">
+        <input type="password" name="password" placeholder="enter password">
+        <div>
+            <label>
+                male
+                <input type="radio" name="gender" value="man">
+
+            </label>
+            <label>
+                Female
+                <input type="radio" name="gender" value="woman">
+            </label>
+
+        </div>
+        <label>
+            <input type="checkbox" name="status">
+        </label>
+
+        <button>save</button>
+    </form>
+</div>
+
+<!--asdasd?-->
+<!--    user=Velit+sed+architecto&-->
+<!--    password=Pa%24%24w0rd%21&-->
+<!--    gender=woman&-->
+<!--    status=on-->
+
+
+<script>
+    // let form1 = document.getElementsByTagName('form')[0];
+    // console.log(form1);
+    // console.log(form1[0].name);
+
+    // formsAPI
+    console.log(document.forms.form2.username);
+    console.log(document.forms.form2.password);
+    console.log(document.forms.form2.gender);
+
+
+</script>
+
+
+</body>
+</html>
