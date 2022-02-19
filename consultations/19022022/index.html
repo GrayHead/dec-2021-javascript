@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // function usersDatabase() {
+    //     let users = [
+    //         {name: 'vasya', age: 31, status: false},
+    //         {name: 'petya', age: 30, status: true},
+    //         {name: 'kolya', age: 29, status: true},
+    //         {name: 'olya', age: 28, status: false},
+    //         {name: 'max', age: 30, status: true},
+    //         {name: 'anya', age: 31, status: false},
+    //         {name: 'oleg', age: 28, status: false},
+    //         {name: 'andrey', age: 29, status: true},
+    //         {name: 'masha', age: 30, status: true},
+    //         {name: 'olya', age: 31, status: false},
+    //         {name: 'max', age: 31, status: true},
+    //     ];
+    //     return {
+    //         addUser: function (user) {
+    //             console.log(user);
+    //             if (user.name) {
+    //                 users.push(user);
+    //                 console.log('user was add');
+    //             } else {
+    //                 console.log('erorororo no name');
+    //             }
+    //
+    //         },
+    //         getUsersState: function () {
+    //             console.log(users);
+    //         },
+    //         getStatusTrue: () => users.filter(u => u.status),
+    //         getUsersByAgeGT: (ageGT) => users.filter(u => u.age > 30)
+    //         // GTbyDynamicAge
+    //         // sort by age asc dec sortedUsers(asc|| desc)
+    //         // getBystatus(true|false)
+    //     };
+    //
+    // }
+    //
+    // let m = usersDatabase(); //{addUser: function (user) {if (user.name) {users.push(user);}
+    // console.log(m);
+    // m.addUser({name: 'kokos'});
+    // m.getUsersState();
+    // console.log(m.getStatusTrue());
+    // console.log(m.getUsersAgeGT30());
+
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+
+    Array.prototype.myForeach = function (callback) {
+
+        for (const item of this) {
+            callback(item);
+        }
+    }
+    users.myForeach(function (u) {
+        console.log('this is user of current iteration', u);
+    });
+
+
+    class Car {
+
+        constructor(model) {
+            this.model = model;
+        }
+    }
+
+    class UserComposition {
+
+        constructor(name, car) {
+            this.name = name;
+            this.car = car;
+        }
+    }
+
+    let car = new Car("porsche");
+    let userComposition = new UserComposition('vasya', car);
+
+
+    class UserArgegation {
+
+        constructor(name, model) {
+            this.name = name;
+            this.car = new Car(model);
+        }
+    }
+
+    let userArgegation = new UserArgegation('vasyta','porsche');
+
+</script>
+</body>
+</html>
