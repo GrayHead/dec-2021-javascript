@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    // vanila js
+    // let user = {name: 'vaysa', age: 31, status: true, id: 1};
+    // let id = user.id;
+    // let name = user.name;
+    // let age = user.age;
+    // let status = user.status;
+
+    // super duper modern
+    // let {id, name, age, wife, wife: {imya}} = {name: 'vaysa', age: 31, status: true, id: 1, wife: {imya: 'olya'}};
+    // console.log(id);
+    // console.log(name); // vaysa
+    // console.log(wife);
+    // console.log(imya) // olya
+
+    // function asdqwe(user) {
+    //     let {name, age} = user;
+    //     console.log(name, age);
+    //  }
+    //
+    // function asdqwe({name, age}) {
+    //     console.log(name, age);
+    // }
+    //
+    // let u = {name: 'vaysa', age: 31, status: true, id: 1, wife: {imya: 'olya'}};
+    // asdqwe(u);
+
+    // let numbers = [11, 22, 33];
+    // num1 = numbers[0];
+    // num2 = numbers[1];
+    // num3 = numbers[2];
+
+    // let [num1, num2, num3] = [11, 22, 33];
+    // console.log(num1,num2, num3);
+
+    // let [num1, , num3] = [11, 22, 33];
+    // console.log(num1, num3);
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+    let users2 = [...users];
+
+    function foobar(...item) {
+
+    }
+
+    foobar(...users);
+
+    let nums = [1, 2, 3,...users];
+    console.log(nums);
+
+
+
+</script>
+
+</body>
+</html>
