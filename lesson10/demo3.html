@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <input type="text" name="username">
+    <button>find</button>
+</form>
+
+<ul id="results">
+
+</ul>
+
+<script>
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+    let form = document.forms[0];
+    let usernameInput = form.username;
+    let results = document.getElementById('results');
+
+    form.onsubmit = function (e) {
+        e.preventDefault();
+        results.innerText = '';
+        let usernameValue = usernameInput.value;
+        let filter = users.filter(value => value.name === usernameValue);
+        for (const item of filter) {
+            let li = document.createElement('li');
+            li.innerText = `${item.name} ${item.age} ${item.status}`;
+            results.append(li);
+        }
+
+
+    };
+
+
+</script>
+
+</body>
+</html>

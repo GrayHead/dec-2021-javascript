@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form action="">
+    <!--    <input type="text" required minlength="3" maxlength="7">-->
+    <!--    <input type="number" required min="3" max="7" >-->
+
+    <!--    <input type="text" pattern="+380\d{9}"> -->
+    <input type="text" pattern="[a-zA-Zа-яА-ЯїЇҐґ]{2}\d{6}">
+
+
+    <button>send</button>
+
+</form>
+
+<script>
+
+    let phone = '+380671231212';
+    var re = /\+380\d{9}/i;
+    console.log(phone.match(re));
+</script>
+</body>
+</html>

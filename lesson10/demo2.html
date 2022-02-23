@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <input type="text" name="login">
+    <input type="text" name="password">
+    <button> sign in</button>
+</form>
+
+<script>
+
+
+    // preventDefault
+
+    let users = [];
+    let form = document.forms[0];
+    form.onsubmit = function (e) {
+        e.preventDefault();
+        users.push({login: e.target.login.value, password: e.target.password.value});
+        console.log(users);
+    };
+
+    let inputLogin = form.login;
+    inputLogin.addEventListener('input', (e) => {
+        let yourInput = e.target;
+        let dataFromInput = yourInput.value;
+        let convertDataToLowerCase = dataFromInput.toLowerCase();
+        if (convertDataToLowerCase.includes('duck')) {
+            alert('krya-krya');
+        }
+
+    })
+
+
+    // forms+events
+    // filter by...
+    // regexp
+
+
+</script>
+</body>
+</html>
