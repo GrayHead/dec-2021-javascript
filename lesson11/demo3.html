@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    document.cookie = 'name=kokos';
+    document.cookie = 'surname=abrikosov';
+    document.cookie = 'age=31';
+    document.cookie = 'status=true';
+    document.cookie = 'max-age=233';
+    // console.log(document.cookie);
+    // let cookies = document.cookie.split(';');
+    // console.log(cookies);
+    // let firstCookie = cookies[0];
+    // console.log(firstCookie);
+
+    let cookies = document.cookie.split(';');
+    let obj = {};
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].split('='); // [name,kokos] [surname, arbikosv]
+        obj[cookie[0]] = cookie[1];
+
+    }
+    console.log(obj);
+
+
+</script>
+
+</body>
+</html>

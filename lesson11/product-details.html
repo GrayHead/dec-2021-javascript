@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+<h1>products page</h1>
+<div id="productdetails"></div>
+
+<script>
+    let url = new URL(location.href);
+    let productJSON = url.searchParams.get('pd');
+    let productdetails = document.getElementById('productdetails');
+    productdetails.innerText = productJSON;
+
+</script>
+</body>
+</html>

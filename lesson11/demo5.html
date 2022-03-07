@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+
+    let products = [
+        {
+            id: 1,
+            title: 'milk',
+            price: 22,
+            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+        },
+        {
+            id: 2,
+            title: 'juice',
+            price: 27,
+            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+        },
+        {
+            id: 3,
+            title: 'tomato',
+            price: 47,
+            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+        },
+        {
+            id: 4,
+            title: 'tea',
+            price: 15,
+            image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+        },
+    ];
+    for (const product of products) {
+
+        let divProduct = document.createElement('div');
+        divProduct.innerText = product.title;
+        let anchor = document.createElement('a');
+        anchor.href = `product-details.html?pd=${JSON.stringify(product)}`;
+        anchor.innerText = 'details';
+        divProduct.append(anchor);
+
+
+        document.body.append(divProduct);
+
+
+    }
+
+
+</script>
+
+</body>
+</html>
