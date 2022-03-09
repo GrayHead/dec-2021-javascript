@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<!--є масив - -->
+<!--створити під кожен об'єкт свій блок з конопкою "додати до улюблених" при натисканні на
+ яку об'єкт потрапляє до масиву favorites улюблених обраних об'єктів в локальному сховищі.-->
+<!--Створити сторніку favorites.html при переході на яку потрібно вивест в документ всіх обраних на попередньому етапі.-->
+
+
+<div id="users"></div>
+<a href="./favorites.html"> favorites page</a>
+
+<script>
+
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+    let usersBox = document.getElementById('users');
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    for (const user of users) {
+        let userDiv = document.createElement('div');
+        userDiv.innerText = user.name + ' - ';
+        let button = document.createElement('button');
+        button.innerHTML = '<strong>add to fav</strong>'
+        button.onclick = function (e) {
+            favorites.push(user);
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        };
+        userDiv.append(button);
+        usersBox.append(userDiv);
+
+
+    }
+
+
+    usesr
+
+</script>
+
+</body>
+</html>

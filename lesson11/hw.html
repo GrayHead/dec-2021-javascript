@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- -створити форму з інпутами для name та age.-->
+<!--При відправці форми записати об'єкт в localstorage-->
+
+<!-- -створити форму з інпутами для model,type та volume автівки.-->
+<!--при відпарвці форми об'єкти зберігаються в масиві в локальному сховищі.-->
+
+
+<form name="f1">
+    <input type="text" name="username">
+    <input type="number" name="age">
+    <button>save to storage</button>
+</form>
+
+<form name="carForm">
+    <input type="text" name="model">
+    <input type="text" name="type">
+    <input type="number" name="volume">
+    <button>save car</button>
+</form>
+
+<script>
+    // let f1 = document.forms.f1;
+    // f1.onsubmit = function (e) {
+    //     e.preventDefault();
+    //     let nameInput = e.target.username.value;
+    //     let ageInput = e.target.age.value;
+    //     // let user = {nameInput: nameInput, ageInput: ageInput}
+    //     let user = {nameInput, ageInput};
+    //     localStorage.setItem(nameInput, JSON.stringify(user));
+    // };
+
+    // let f1 = document.forms.f1;
+    // f1.onsubmit = function (e) {
+    //     e.preventDefault();
+    //     localStorage.setItem('nameInput', JSON.stringify({
+    //         nameInput: e.target.age.value,
+    //         ageInput: e.target.username.value
+    //     }));
+    // };
+
+
+    let carsArray = JSON.parse(localStorage.getItem('cars')) || [];
+
+    document.forms.carForm.onsubmit = function (e) {
+        e.preventDefault();
+        let model = e.target.model.value;
+        let type = e.target.type.value;
+        let volume = e.target.volume.value;
+        let car = {model, type, volume}
+        carsArray.push(car);
+        localStorage.setItem('cars', JSON.stringify(carsArray));
+
+    };
+
+</script>
+</body>
+</html>
