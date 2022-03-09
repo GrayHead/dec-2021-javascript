@@ -9,6 +9,8 @@
 </head>
 <body>
 
+
+<table id="tbl"></table>
 <script>
     let favorites = JSON.parse(localStorage.getItem('favorites'));
     for (const user of favorites) {
@@ -17,6 +19,19 @@
         document.body.append(userDiv);
     }
 
+
+    let tbl = document.getElementById('tbl');
+    let rows = +prompt('rows?'); // 10
+    let cells = +prompt('cells?'); // 5
+    for (let i = 0; i < rows; i++) {
+        let tr = document.createElement('tr');
+        for (let j = 0; j < cells; j++) {
+            let td = document.createElement('td');
+            td.innerText = `cell ${i + 1} ${j + 1}`;
+            tr.append(td);
+        }
+        tbl.append(tr);
+    }
 </script>
 
 </body>
