@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // let user1 = {
+    //     name: 'vasya',
+    //     greeting: function (msg) {
+    //         console.log(`${msg} my name is ${this.name}`);
+    //     },
+    //     foobar: function (a, b, c) {
+    //         console.log(this, a, b, c)
+    //     },
+    // };
+    // let user2 = {name: 'kokos'};
+    // user1.greeting.call(user2, 'hi');
+    //
+    // let args = ['asd', 'zxc']
+    // user1.foobar.apply(user2, args);
+    //
+    // let greeting = user1.greeting.bind(user2);
+    // greeting('ajsfdahsdg');
+    // greeting('asdqwe');
+    // greeting('itsdfgj');
+    // greeting('dsfhsd');
+
+    function User(name, surname) {
+        this.name = name;
+        this.surname = surname;
+
+    }
+
+    function Customer(name, surname, password) {
+        User.apply(this, arguments);
+        this.passowrd = password;
+    }
+
+    let customer = new Customer('asd','qwe','zxc');
+    console.log(customer);
+
+</script>
+</body>
+</html>
