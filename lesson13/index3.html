@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    // console.log('start');
+    // setTimeout(() => {
+    //     let counter = 0;
+    //     console.log('do1', counter);
+    //     setTimeout(() => {
+    //         counter++;
+    //         console.log('do2', counter);
+    //         setTimeout(() => {
+    //             counter++;
+    //             console.log('do', counter);
+    //             setTimeout(() => {
+    //                 counter++;
+    //                 console.log('do', counter);
+    //                 setTimeout(() => {
+    //                     counter++;
+    //                     console.log('do', counter);
+    //                     setTimeout(() => {
+    //                         counter++;
+    //                         console.log('do', counter);
+    //                         setTimeout(() => {
+    //                             counter++;
+    //                             console.log('do', counter);
+    //                         }, 3000)
+    //                     }, 3000)
+    //                 }, 3000)
+    //             }, 3000)
+    //         }, 3000)
+    //     }, 2500)
+    // }, 2000);
+    // console.log('end');
+
+
+    // new Promise((resolve, reject) => {
+    //     let counter = 0;
+    //     setTimeout(() => {
+    //         console.log('do', counter);
+    //         counter++;
+    //         resolve(counter);
+    //
+    //     }, 1000);
+    // })
+    //     .then((counter) => {
+    //         console.log(counter);
+    //         return new Promise((resolve, reject) => {
+    //             setTimeout(() => {
+    //                 console.log('do', counter);
+    //                 counter++;
+    //                 resolve(counter);
+    //             }, 2000)
+    //         })
+    //     })
+    //     .then(counter => {
+    //         return new Promise((resolve, reject) => {
+    //             setTimeout(() => {
+    //                 console.log('do', counter);
+    //                 counter++;
+    //                 resolve(counter);
+    //
+    //             }, 3000)
+    //         });
+    //     })
+    //     .then(counter => {
+    //         new Promise((resolve, reject) => {
+    //             setTimeout(() => {
+    //                 console.log('do', counter);
+    //                 counter++;
+    //                 if (counter > 2) {
+    //                     reject('ajsdfasg');
+    //
+    //                 }
+    //                 resolve(counter)
+    //
+    //             }, 2000);
+    //         });
+    //     })
+    //     .catch(reason => console.log(reason));
+
+    // function timeoutFn(counter, milis) {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             console.log('async operation', counter);
+    //             counter++;
+    //             resolve(counter);
+    //         }, milis)
+    //     });
+    // }
+
+    // timeoutFn(0, 2000)
+    //     .then(value => {
+    //         return timeoutFn(value, 3000);
+    //     })
+    //     .then(value => timeoutFn(value, 4000));
+
+
+    // fetch('https://jsonplaceholder.typicode.com/users') // return new Promise(async?????)
+    //                 .then(response => response.json()) // readbleStream->JSobject
+    //                 .then(data => {
+    //
+    //                     console.log(data);
+    //                 });
+    //
+
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => {
+            return response.json();
+        })
+        .then(value => console.log(value));
+
+
+</script>
+
+</body>
+</html>
+
+
